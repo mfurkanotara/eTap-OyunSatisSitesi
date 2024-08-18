@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Tap Anasayfa</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="shortcut icon" href="favicon_io/favicon.ico" type="image/x-icon" >
+    <style>
+        .form{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .name{
+            flex: 1 0 10rem;
+        }
+        .email{
+            flex: 1 0 10rem;
+        }
+        .button{
+            flex: 1 0 5rem;
+            background-color: #c0b9a5;
+        }
+        .card {
+            width: 300px;
+            height: 400px;
+            display: flex;
+            margin-bottom: 50px;
+            margin-left: 40px;
+            margin-right: 50px;
+            color: white;
+            background-color: darkolivegreen;
+            border-radius: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.1);
+            z-index: 1;
+        }
+
+        .card-img-top {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 5px;
+            overflow: hidden;
+        }
+
+        .card-title {
+            margin-bottom: 5px;
+        }
+
+        .card-text {
+            margin-bottom: 5px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+
+        .btn {
+            display: none;
+        }
+
+        .card:hover .btn {
+            display: block;
+        }
+
+        /* İmleci değiştirecek stil */
+        .card:hover {
+            cursor: pointer; /* İmleci 'pointer' olarak değiştir */
+            transition-duration: 0.7s;
+        }
+    </style>
+</head>
+<body style="background-color: darkslategray;">
+    
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+        <a class="navbar-brand" href="index.html"><img style="height: 80px; width: 80px;" src="Photos/etap_logo.png" alt="e-Tap Logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"> <a class="nav-link" href="index.html" style="font-size: 16pt;">MAĞAZA</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="notifications.html" style="font-size: 16pt;">GÜNCELLEMELER/HABERLER</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="support.html" style="font-size: 16pt;">DESTEK</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="account.html"><b style="color: white; font-size: 16pt;">HESABIM</b></a> </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div style="margin-top: 105px;" id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <a href="Games/deadbydaylight.html">
+                                <img src="Photos/GamePhotos/deadbydaylight.jpg" class="d-block w-100" alt="...">
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="Games/gta5.html">
+                                <img src="Photos/GamePhotos/gta5.jpg" class="d-block w-100" alt="...">
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="Games/lastofus.html">
+                                <img src="Photos/GamePhotos/lastofus.jpg" class="d-block w-100" alt="...">
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="Games/pubg.html">
+                                <img src="Photos/GamePhotos/pubg.jpg" class="d-block w-100" alt="...">
+                            </a>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Geri</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">İleri</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Çerez Politikası</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Çerezler (genellikle internet çerezleri olarak bilinir), bir ağı kullanırken bilgisayarınızı tanımlamak için kullanılan kullanıcı adı ve şifre gibi küçük veri parçaları içeren metin dosyalarıdır. Belirli çerezler, belirli kullanıcıları tanımlamak ve web tarama deneyimlerini iyileştirmek için kullanılır. Bir çerezde saklanan veriler, bağlantınız üzerine sunucu tarafından oluşturulur. Bu veriler size ve bilgisayarınıza özgü bir kimlikle etiketlenir. Çerez bilgisayarınız ve ağ sunucusu arasında değiş tokuş edildiğinde sunucu kimliği okur ve size özel olarak hangi bilgilerin sunulacağını bilir.<br><a style="color: skyblue;" href="politikalar_sozlesmeler/cerezpolitikasi.html">Daha fazla bilgi için tıklayınız.</a>
+                </div>
+                <button style="z-index: 10;" id="acceptButton" class="btn btn-primary">
+                    Kabul ediyorum.
+                </button>
+            </div>
+        </div>
+    </div>
+    <div style="text-align: center; margin-top: 50px; font-size: 25pt;">
+        <b style="color: white;">POPÜLER OYUNLAR</b>
+    </div>
+    <div style="margin-left: 50px;" class="row">
+        <div class="card" onclick="goToLink('Games/deadcells.html')" style="width: 300px; height: 400px; display: flex; margin-bottom: 0; margin-left: 40px; margin: 50px; color: white; background-color: darkolivegreen; border-radius: 20px; cursor: pointer;">
+            <img class="card_foto1" src="Photos/GamePhotos_Card/deadcells.jpg" style="width: 100%; height: 200px; object-fit: cover;">
+            <div class="card-body" style="padding: 5px; overflow: hidden;">
+                <h4 class="card-title">Dead Cells</h4>
+                <p class="card-text" style="margin-bottom: 10px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;">Dead Cells metroidvania esinli rogue-lite bir aksiyon platform oyunudur. Sürekli büyüyen ve değişen bir kaleyi keşfedeceksin... Tabii eğer bu kalenin sakinlerini 2D souls-lite çarpışmalarda geçebileceğini varsayarsak. Kayıt noktası yok. Öldür, öl, öğren, tekrarla.</p>
+            </div>
+        </div>
+        <div class="card" onclick="goToLink('Games/dyinglight.html')" style="width: 300px; height: 400px; display: flex; margin-bottom: 0; margin-left: 40px; margin: 50px; color: white; background-color: darkolivegreen; border-radius: 20px;">
+            <img class="card-img-top" src="Photos/GamePhotos_Card/dying-light-definitive-edition1u99v_cover-300x140.png" style="width: 100%; height: 200px; object-fit: cover;">
+            <div class="card-body" style="padding: 5px; overflow: hidden;">
+                <h4 class="card-title">Dying Light Definitive Edition</h4>
+                <p class="card-text" style="margin-bottom: 5px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;">Sadece en güçlünün hayatta kaldığı istilaya uğramış bir dünyada dolaş. İnsan ya da zombi, her türlü canavarla dövüşme becerilerinde ustalaş. Çatılarda parkura çık, silahlar üret ve kendi kâbuslarınla yüzleşirken bir yandan diğer afetzedelere yardım et.</p>
+            </div>
+        </div>
+        <div class="card" onclick="goToLink('Games/planetcoaster.html')" style="width: 300px; height: 400px; display: flex; margin-bottom: 0; margin-left: 40px; margin: 50px; color: white; background-color: darkolivegreen; border-radius: 20px;"> 
+            <img class="card-img-top" src="Photos/GamePhotos_Card/planetcoaster.png" style="width: 100%; height: 200px; object-fit: cover;"> 
+            <div class="card-body" style="padding: 5px; overflow: hidden;">
+                <h4 class="card-title">Planet Coaster</h4>
+                <p class="card-text" style="margin-bottom: 5px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;">Planet Coaster; Hayallerinizdeki tema parkını inşa ederken kalabalıkları şaşırtın, sevindirin ve heyecanlandırın. Detaylara benzersiz bir dikkatle inanılmaz tren parkları inşa edin ve tasarlayın ve gerçekten yaşayan bir dünyada parkınızı yönetin.</p>
+            </div> 
+        </div>
+        <div class="card" onclick="goToLink('Games/stickfight.html')" style="width: 300px; height: 400px; display: flex; margin-bottom: 0; margin-left: 40px; margin: 50px; color: white; background-color: darkolivegreen; border-radius: 20px;">
+            <img class="card-img-top" src="Photos/GamePhotos_Card/stick-fight-the-gameqtzgi_cover-300x140.png" style="width: 100%; height: 200px; object-fit: cover;">
+            <div class="card-body" style="padding: 5px; overflow: hidden;">
+                <h4 class="card-title">Stick Fight The Game</h4>
+                <p class="card-text" style="margin-bottom: 5px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;">Stick Fight, internetin altın çağından ikonik çöp adamlar olarak savaştığınız, fizik tabanlı bir çevrimiçi dövüş oyunudur.</p>
+            </div>
+        </div>
+        <div class="card" onclick="goToLink('Games/pubg.html')" style="width: 300px; height: 400px; display: flex; margin-bottom: 0; margin-left: 40px; margin: 50px; color: white; background-color: darkolivegreen; border-radius: 20px;">
+            <img class="card-img-top" src="Photos/GamePhotos/pubg.jpg" style="width: 100%; height: 200px; object-fit: cover;">
+            <div class="card-body" style="padding: 5px; overflow: hidden;">
+                <h4 class="card-title">PLAYERUNKNOWN: BATTLEGROUNDS</h4>
+                <p class="card-text" style="margin-bottom: 5px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;">Oyunda 100'e yakın (en fazla 100) oyuncu rotası belirlenmiş bir uçağın içinde oyuna başlarlar. İstedikleri zaman uçaktan atlarlar ve paraşütleriyle adanın herhangi bir konumuna inerler. Oyuncuların temel amacı çeşitli yerlerden buldukları çeşitli silahlarla diğer oyuncuları öldürüp ölmeden en sona kalan oyuncu olmaktır.</p>
+            </div>
+        </div>
+        <div class="card" onclick="goToLink('Games/fifa.html')" style="width: 300px; height: 400px; display: flex; margin-bottom: 0; margin-left: 40px; margin: 50px; color: white; background-color: darkolivegreen; border-radius: 20px;">
+            <img class="card-img-top" src="Photos/GamePhotos/fifa.jpg" style="width: 100%; height: 200px; object-fit: cover;">
+            <div class="card-body" style="padding: 5px; overflow: hidden;">
+                <h4 class="card-title">FIFA 23</h4>
+                <p class="card-text" style="margin-bottom: 5px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;">FIFA 23, Electronic Arts tarafından yayınlanan futbol simülasyonu video oyunudur. FIFA serisinin 30. oyunudur. PC, Nintendo Switch, PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S ve Google Stadia için dünya çapında 26 Eylül 2022 tarihinde piyasaya sürüldü.</p>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+<div style="text-align: center; margin-top: 50px; font-size: 25pt;">
+    <b style="color: white;">YENİ ÇIKANLAR</b>
+</div>
+<div style="margin-left: 50px;" class="row">
+    <div class="card" onclick="goToLink('Games/road96mile0.html')" style="width: 300px; height: 400px; display: flex; margin-bottom: 0; margin-left: 40px; margin: 50px; color: white; background-color: darkolivegreen; border-radius: 20px;">
+        <img class="card-img-top" src="Photos/GamePhotos/road96mile0.jpg" style="width: 100%; height: 200px; object-fit: cover;">
+        <div class="card-body" style="padding: 5px; overflow: hidden;">
+            <h4 class="card-title">Road 96: Mile 0</h4>
+            <p class="card-text" style="margin-bottom: 10px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;">Road 96 birden fazla karakterin yaptıkları yolculukların tümleşik etkisi üzerine oluşturulmuş bir oyun. Seçim gününe kadar kaçan çocukları ve yaşadıklarını göreceğiz ve verdiğimiz kararlar ile ülkenin geleceğini kurtarmaya çalışıyor olacağız. Road 96'nın belirli bir hikâye örgüsü yok.</p>
+        </div>
+    </div>
+    <div class="card" onclick="goToLink('Games/hogwartslegacy.html')" style="width: 300px; height: 400px; display: flex; margin-bottom: 0; margin-left: 40px; margin: 50px; color: white; background-color: darkolivegreen; border-radius: 20px;">
+        <img class="card-img-top" src="Photos/GamePhotos/hwlegacy.jpg" style="width: 100%; height: 200px; object-fit: cover;">
+        <div class="card-body" style="padding: 5px; overflow: hidden;">
+            <h4 class="card-title">Hogwarts Legacy</h4>
+            <p class="card-text" style="margin-bottom: 5px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;">Hogwarts Legacy, Avalanche Software tarafından geliştirilen ve Portkey Games tarafından yayınlanması planlanan, Harry Potter evreninde 1800'lerin sonlarında geçen yeni bir aksiyon rol yapma video oyunudur . Oyun 10 Şubat 2023’de Windows, PlayStation 4, PlayStation 5, Xbox One ve Xbox Series X/S için piyasaya sürüldü.</p>
+        </div>
+    </div>
+    <div class="card" onclick="goToLink('Games/diablo4.html')" style="width: 300px; height: 400px; display: flex; margin-bottom: 0; margin-left: 40px; margin: 50px; color: white; background-color: darkolivegreen; border-radius: 20px;">
+        <img class="card-img-top" src="Photos/GamePhotos/diablo4.jpg" style="width: 100%; height: 200px; object-fit: cover;">
+        <div class="card-body" style="padding: 5px; overflow: hidden;">
+            <h4 class="card-title">Diablo IV</h4>
+            <p class="card-text" style="margin-bottom: 5px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;">Diablo IV, Blizzard Entertainment tarafından geliştirilen ve yayınlanan bir aksiyon rol yapma oyunudur ve Diablo serisinin dördüncü ana oyunudur. Oyun 1 Kasım 2019'da BlizzCon 2019'da duyuruldu,[2] ve 6 Haziran 2023'te piyasaya sürülmüştür.</p>
+        </div>
+    </div>
+    <div class="card" onclick="goToLink('Games/gtavi.html')" style="width: 300px; height: 400px; display: flex; margin-bottom: 0; margin-left: 40px; margin: 50px; color: white; background-color: darkolivegreen; border-radius: 20px;">
+        <img class="card-img-top" src="Photos/GamePhotos/gta6.png" style="width: 100%; height: 200px; object-fit: cover;">
+        <div class="card-body" style="padding: 5px; overflow: hidden;">
+            <h4 class="card-title">Grand Theft Auto: VI</h4>
+            <p class="card-text" style="margin-bottom: 5px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;">Meşhur GTA serisinin son oyunu olan Grand Theft Auto: VI, ön sipariş ile yayında.</p>
+        </div>
+    </div>
+    <div class="card" onclick="goToLink('Games/cskylines2.html')" style="width: 300px; height: 400px; display: flex; margin-bottom: 0; margin-left: 40px; margin: 50px; color: white; background-color: darkolivegreen; border-radius: 20px;">
+        <img class="card-img-top" src="Photos/GamePhotos/c_skylines2.jpg" style="width: 100%; height: 200px; object-fit: cover;">
+        <div class="card-body" style="padding: 5px; overflow: hidden;">
+            <h4 class="card-title">Cities Skylines 2</h4>
+            <p class="card-text" style="margin-bottom: 5px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;">Cities: Skylines II, Colossal Order tarafından geliştirilen ve Paradox Interactive tarafından yayınlanan bir 2023 şehir kurma oyunudur.</p>
+        </div>
+    </div>
+    <div class="card" onclick="goToLink('Games/twd.html')" style="width: 300px; height: 400px; display: flex; margin-bottom: 0; margin-left: 40px; margin: 50px; color: white; background-color: darkolivegreen; border-radius: 20px; overflow: hidden;">
+    <img class="card-img-top" src="Photos/GamePhotos/twd.png" style="width: 100%; height: 200px; object-fit: cover;">
+    <div class="card-body" style="padding: 5px;">
+        <h4 class="card-title">The Walking Dead: The Telltale Definitive Series</h4>
+        <p class="card-text" style="margin-bottom: 5px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;">The Walking Dead, Telltale Games ve Skybound Games tarafından geliştirilen ve yayınlanan bölümlü bir grafik macera oyunu serisidir. Robert Kirkman, Tony Moore ve Charlie Adlard'ın aynı adlı çizgi roman serisine dayanıyor.</p>
+    </div>
+</div>
+
+</div>
+</div>
+</div>
+<footer class="bg-body-tertiary text-center text-lg-start">
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: white;">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: white;">
+            © 2024 Telif Hakları Saklıdır:
+            <a class="text-body" href="index.html">etap.com.tr</a><br>
+            <a href="https://maps.app.goo.gl/FCSyGLmfLk2HdVHs6">Ankara e-Tap Genel Müdürlük: Kahramankazan Bulvarı 06103, Altındağ, Ankara</a><br>
+            <span>Telefon: 444 1 444</span><br>
+            <span>Faks: 0(312) 925 52 06</span><br><br>
+            <a style="color: rgb(105, 204, 232);" class="text-body" href="politikalar_sozlesmeler/gizlilikpolitikasi.html">Gizlilik Politikası</a>
+            <a> ∙ </a>
+            <a style="color: rgb(105, 204, 232);" class="text-body" href="politikalar_sozlesmeler/kullanimsozlesmesi.html">Kullanım Sözleşmesi</a>
+            <a> ∙ </a>
+            <a style="color: rgb(105, 204, 232);" class="text-body" href="politikalar_sozlesmeler/cerezpolitikasi.html">Çerez Politikası</a>
+            <a> ∙ </a>
+            <a style="color: rgb(105, 204, 232);" class="text-body" href="politikalar_sozlesmeler/iadepolitikasi.html">İade Politikası</a>
+            <a> ∙ </a>
+            <a style="color: rgb(105, 204, 232);" class="text-body" href="politikalar_sozlesmeler/kvkk.html">KVKK Bilgilendirme</a><br>
+
+            <!-- Sosyal medya simgeleri -->
+            <div class="social-icons mt-3">
+                <a href="https://instagram.com/mfurkanotara" class="text-body"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/MeNakruf" class="text-body"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-body"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.youtube.com/channel/UC36i9rF0AqKqGXPGZGra4mA" class="text-body"><i class="fab fa-youtube"></i></a>
+            </div>
+            <!-- Sosyal medya simgeleri -->
+        </div>
+        <!-- Copyright -->
+
+        <!-- Modal -->
+        <div class="modal" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Modal Başlık</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        Modal içeriği..
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Kapat</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+  
+  
+  <!--
+    <div class="col-md-6">
+          <div class="card" style="width: 400px; height: 400px; margin-bottom: 0; margin-left: 40px; margin: 50px; margin-left: 239px;">
+              <img class="card-img-top" src="Photos/GamePhotos_Card/dead-cellsv5ewn_cover-300x140.png" style="width: 100%; height: 200px; object-fit: cover;">
+              <div class="card-body" style="padding: 5px; overflow: hidden;">
+                  <h4 class="card-title">Dead Cells</h4>
+                  <p class="card-text" style="margin-bottom: 10px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;">Dead Cells metroidvania esinli rogue-lite bir aksiyon platform oyunudur. Sürekli büyüyen ve değişen bir kaleyi keşfedeceksin... Tabii eğer bu kalenin sakinlerini 2D souls-lite çarpışmalarda geçebileceğini varsayarsak. Kayıt noktası yok. Öldür, öl, öğren, tekrarla.</p>
+                  <a href="#" class="btn btn-primary">Detaylar</a>
+              </div>
+          </div>
+        </div>
+  -->
+  
+  </div>
+  
+     
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+    <script>
+      // Kullanıcının kabul et butonuna tıklama durumunu izleyen işlev
+      document.getElementById('acceptButton').addEventListener('click', function() {
+          // Modal'ı kapatarak bir daha gösterilmemesini sağlar
+          $('#myModal').modal('hide');
+  
+          // Kabul edildiğini belirten bir işaretçi saklar
+          localStorage.setItem('cookiesAccepted', 'true');
+      });
+  
+      // Sayfa yüklendiğinde kontrol işlemi yapılır
+      document.addEventListener("DOMContentLoaded", function() {
+          // LocalStorage'da kabul edildiğini kontrol eder
+          var cookiesAccepted = localStorage.getItem('cookiesAccepted');
+  
+          // Eğer kabul edilmişse modalı gösterme
+          if (cookiesAccepted) {
+              $('#myModal').modal('hide');
+          } else {
+              $('#myModal').modal('show');
+          }
+      });
+      
+      function goToLink(link) {
+        window.location.href = link;
+    }
+    </script>
+  
+</body>
+</html>

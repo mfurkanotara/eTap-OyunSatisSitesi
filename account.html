@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hesap</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="CSS2/style2.css">
+	<link rel="shortcut icon" href="favicon_io/favicon.ico" type="image/x-icon" >
+</head>
+<body>
+    <div class="container">
+		<div class="form signup">
+			<h2>Kayıt Ol</h2>
+			<div class="inputBox">
+				<input type="text" required="required">
+				<i class="fa-regular fa-user"></i>
+				<span>Kullanıcı Adı</span>
+			</div>
+			<div class="inputBox">
+				<input type="text" required="required">
+				<i class="fa-regular fa-envelope"></i>
+				<span>E-postanı Gir</span>
+			</div>
+			<div class="inputBox">
+				<input type="password" required="required">
+				<i class="fa-solid fa-lock"></i>
+				<span>Şifre Oluştur</span>
+			</div>
+			<div class="inputBox">
+				<input type="password" required="required">
+				<i class="fa-solid fa-lock"></i>
+				<span>Şifreni Onayla</span>
+			</div>
+			<div class="inputBox">
+				<input type="submit" value="Hesap Oluştur">
+			</div>
+			<p>Hesabın var mı? <a href="#" class="login">Giriş Yap</a></p>
+			<a href="index.html" style="color: aliceblue;" >Anasayfa</a>
+		</div>
+		
+		<div class="form signin">
+			<h2>Giriş Yap</h2>
+			<div class="inputBox">
+				<input type="text" required="required">
+				<i class="fa-regular fa-user"></i>
+				<span>Kullanıcı Adı</span>
+			</div>
+			<div class="inputBox">
+				<input type="password" required="required">
+				<i class="fa-solid fa-lock"></i>
+				<span>Şifre</span>
+			</div>
+			<div class="inputBox">
+				<input type="submit" value="Giriş Yap">
+			</div>
+			<p>Kayıtlı değil misin?<a href="#" class="create">Kayıt Ol</a></p>
+			<a href="index.html" style="color: aliceblue;" >Anasayfa</a>
+
+		</div>
+
+	</div>
+
+    <script>
+		let login = document.querySelector('.login');
+		let create = document.querySelector('.create');
+		let container = document.querySelector('.container');
+
+		login.onclick = function(){
+			container.classList.add('signinForm');
+		}
+		
+		create.onclick = function(){
+			container.classList.remove('signinForm');
+		}
+	</script>
+</body>
+</html>
